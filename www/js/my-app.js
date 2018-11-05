@@ -126,20 +126,22 @@ $$(".container-resultsOff").hide();
 	  
 	 
 	  $$.each(data,function(i, data){
-		item += '<a onClick="exibePaginaBase('+ data.idEmpresa + ')">';
-		item += '<div class="container-results">';
-		item += '<div class="empresa">';		
-		item += '<div class="dados">';
-		item += '<p  class="nome" id="nome' + data.idEmpresa +'">' + data.nomeEmpresa + '</p>';	
-		item += '<p class="endereco">' + data.endereco + '</p>';
-		item += '<p class="telefone"><i class="fa fa-phone" aria-hidden="true"></i>' + data.telefone + '</p>';
-		item += '</div>';
-		item += '<div class="logo-empresa">';
-		item += '<img style="width:100%;" src="https://divulgabr.com.br/admin/logos/' + data.logo +'" ></div>';
-		item += '</div>';
-		item += '</div>';
-		item += '</a>';
-		item += "<div class='border'></div>";
+		item += '<div class="list-block media-list">';
+  item += '<ul>';
+    item += '<li>';
+     item += '<a  class="item-link item-content id'+ data.idEmpresa + '" onClick="exibePaginaBase('+ data.idEmpresa + ')">';
+       item += '<div class="item-media"><img src="https://divulgabr.com.br/admin/logos/' + data.logo +'"></div>';
+        item +='<div class="item-inner">';
+          item += '<div class="item-title-row">';
+           item += '<div class="item-title" id="nome'+ data.idEmpresa + '">' + data.nomeEmpresa + '</div>';
+         item += '</div>';
+         item += '<div class="item-subtitle">' + data.telefone + '</div>';
+          item += '<div class="item-text">' + data.endereco + '</div>';
+        item += '</div>';
+     item += '</a>';
+    item += '</li>';
+  item += '</ul>';
+item += '</div>';
 		
                     //$("#estadoOption").append(data.nome)
 				
