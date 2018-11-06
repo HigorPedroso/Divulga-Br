@@ -10,7 +10,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *;img-src * 'self' data: https:; ">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline';img-src * 'self'; media-src *; connect-src *; ">
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -35,6 +35,9 @@
 </head>
 
 <body>
+<div id="foo" class="foo" >
+	<div class="foo2" style="text-decoration:none; background:white; border-radius:5px; width:80%; margin-left:10%;  padding-top:15px; padding-bottom:15px;"><h1 style="font-size:30px"><span style="color:#0072bc">Divulga</span> <span style="background:#0072bc; padding:5px; border-radius:5px"><span style="color:#00FF00">B</span><span style="color:yellow">R</span></span></h1></div>
+</div>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
 

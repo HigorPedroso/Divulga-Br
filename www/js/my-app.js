@@ -630,3 +630,11 @@ $$.ajax({
     }       
   });
   });
+  
+  $$('.container').hide();
+setTimeout(function(){$('.container').show();}, 5000);
+	$$('#foo').fadeIn().fadeOut(5000);
+	 
+		$$(".dispar").click(function(){
+    $$(".dropdown").slideToggle();
+});
