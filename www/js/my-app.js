@@ -102,16 +102,14 @@ item += '</div>';
     var lat = position.coords.latitude;
     var lng = position.coords.longitude;
 	var distancia = $$("#distancia").val();
-
-	myApp.alert(lat);
-	myApp.alert(lng);
-	myApp.alert(distancia);
 	
 	returnAjax(lat, lng, distancia);
 }
 
 function returnAjax(latitude, longitude, distancia){
-
+myApp.alert(lat);
+	myApp.alert(lng);
+	myApp.alert(distancia);
 	 $$.ajax({
       url: "https://divulgabr.com.br/aplicativo/resultados.php",  
 	  type : 'post',
