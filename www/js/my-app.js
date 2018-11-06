@@ -107,9 +107,7 @@ item += '</div>';
 }
 
 function returnAjax(latitude, longitude, distancia){
-myApp.alert(lat);
-	myApp.alert(lng);
-	myApp.alert(distancia);
+myApp.alert('123');
 	 $$.ajax({
       url: "https://divulgabr.com.br/aplicativo/resultados.php",  
 	  type : 'post',
