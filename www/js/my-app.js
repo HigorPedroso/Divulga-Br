@@ -107,7 +107,7 @@ item += '</div>';
 }
 
 function returnAjax(latitude, longitude, distancia){
-myApp.alert('123');
+
 	 $$.ajax({
       url: "https://divulgabr.com.br/aplicativo/resultados.php",  
 	  type : 'post',
@@ -115,9 +115,11 @@ myApp.alert('123');
     dataType: 'html',
 	   beforeSend: function(){
       //$('#carregando').fadeIn(); 
+		   myApp.showPreloader('Carregando');
 $$(".container-resultsOff").hide();	  
     },
       success: function(ret) { 
+	      myApp.hidePreloader();
 		 //alert(retorno);
 		 if(ret != "null"){
 	  
