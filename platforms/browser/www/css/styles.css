@@ -1,0 +1,472 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+.navbar-inner{
+	background: #0072bc;
+	color:white;
+}
+
+.icon-bars{
+	color:white;
+}
+
+i.icon.icon-bars{
+	color:white;
+}
+
+.page{
+	background:white;
+}
+
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    /*background-color:#E4E4E4;
+    background-image:linear-gradient(top, #000 0%, #000 51%);
+    background-image:-webkit-linear-gradient(top, #000 0%, #000 51%);
+    background-image:-ms-linear-gradient(top, #000 0%, #000 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #000),
+        color-stop(0.51, #000)
+    );*/
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+p{
+	text-transform:none;
+	font-size:15px;
+}
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#FFFFFF;
+    display:block;
+}
+
+.event.received {
+    background-color:#FFFFFF;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+.colorPrimary{
+	background:#0072bc;
+	color: #0072bc;
+}
+
+.header{
+	background:#0072bc;
+	text-align:left;
+	padding-left:20px;
+	padding-top:10px;
+	padding:15px;
+}
+
+.header h1{
+	color:white;
+	font-size:25px;
+	margin-left:-30px;
+}
+
+.header p{
+	color:white;
+	font-size:30px;
+}
+
+.container{
+	background: #FFF;
+	width:100%;
+}
+
+.logo{
+	text-align:center;
+}
+
+.logo img{
+	width:auto;
+	height:auto;
+	max-width:250px;
+}
+
+.search{
+	background:#0072bc;
+	width:90%;
+	margin-left:5%;
+	border-radius:20px;
+	text-align:center;
+	color:white;
+	padding-top:10px;
+	padding-bottom:60px;
+}
+
+.search h3{
+	font-size:20px;
+}
+
+.inputs input, .inputs select{
+	border:none;
+	border-radius:10px;
+	height:40px;
+	width:80%;
+	margin-top:10px;
+	font-size:20px;
+	background:white;
+}
+
+.btn-search{
+	background:#eba100;
+	color:white;
+	font-weight:bold;
+	border:none;
+	border-radius:10px;
+	height:40px;
+	width:80%;
+	margin-top:10px;
+	font-size:20px;
+}
+
+.dropdown{
+	color:black;
+}
+
+.icon-left{
+	float:left;
+	margin-top:0px;
+}
+
+.aba{
+	left:10px;
+}
+
+.menu{
+	float:right;
+	margin-top:-60px;
+	font-size:15px;
+}
+
+.foo{
+	width:100%;
+	height:800px;
+	background:#0072bc;
+	text-align:center;
+}
+
+.foo2{
+position: relative;
+top: 40%;
+transform: translateY(-50%); 
+}
+
+.menu ul{
+	list-style:none;
+	background:white;
+	border-radius:10px;
+	padding:5px;
+	padding-left:25px;
+	padding-right:25px;
+	font-size:30px;
+	position:absolute;
+	margin-left:-46%;
+	display:none;
+	margin-top:-15px;
+	-webkit-box-shadow: 3px 3px 1px #fc8;
+}
+
+.menu ul li{
+	width:100%;
+}
+
+.ini{
+	background:#0072bc;
+	color:white;
+	text-align:center;
+	padding:1px;
+	font-size:10px;
+}
+
+.container-results{
+	padding-left:15px;
+	padding-right:10px;
+	width:92%;
+	font-size:20px;
+}
+
+.border{
+	border-bottom:1px solid gray;
+	float:left;
+	width:100%;
+	margin-top:-10px;
+}
+
+.container-results p{
+	margin-top:1px;
+}
+
+.results p{
+	font-size:15px;
+}
+
+.container-results .endereco{
+font-size:15px;
+margin-top:-3px;
+}
+
+.container-results .telefone{
+font-size:15px;
+margin-top:-3px;
+}
+
+.empresa{
+	width:100%;
+}
+
+.dados{
+	width:60%;
+	float:left;
+	padding-bottom:10px;
+}
+
+.dados p{
+	font-size:20px;
+}
+
+.logo-empresa{
+	max-width:80px;
+    max-height:50px;
+    width: auto;
+    height: auto;
+	float:right;
+	border:1px solid #0072bc;
+	border-radius:10px;
+	padding:10px;
+	padding-top:20px;
+	padding-bottom:20px;
+	margin-right:20px;
+}
+
+.preview .list-block .item-text{
+	font-size:13px;
+	height:auto;
+}
+
+.nome{
+	font-weight:bold;
+}
+
+.imagemDestaque{
+	height:200px;
+	width:100%;
+}
+
+.imagemDestaque img{
+	height:100%;
+	width:100%;
+	border-bottom: 4px solid #0072bc;
+}
+
+.imagem{
+	width:50px;
+	height:50px;
+}
+
+.dadosPreview{
+	 width:55%;
+	 font-size:15px;
+	 padding:0px;
+	 float:left;
+	 margin-top:210px;
+}
+
+.dadosPreview p{
+	 margin-top:8px;
+}
+
+.preview .logo-empresa{
+	margin-top:40px;
+	margin-top:200px;
+}
+
+.container-dados{
+	background:#e5e5e5;
+	padding:2%;
+}
+
+.sobre{
+	background:white;
+	padding:10px;
+	margin-top:20px;
+	margin-bottom:15px;
+}
+
+.sobre h3{
+	font-size:30px;
+}
+
+.sobre p{
+	font-size:16px;
+}
+
+.sobre img{
+    width: 100px;
+    height: 100px;
+}
+
+.container-galery{
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+
+.panel{
+background:white;
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.panel a{
+	color:blue;
+	font-size:20px;
+}
+
+.logo-menu img{
+	width:auto;
+	height:auto;
+	width:200px;
+}
+
+.block {
+    margin: 35px 0;
+    padding: 0 15px;
+    color: #6d6d72;
+}
+.padding{
+	padding:2%5px;
+}
+
+.container-galery img{
+	 max-width:500px;
+    max-height:500px;
+    width: auto;
+    height: auto;
+	
+}
+
+.container-sobre a{
+	color:#0072bc;
+}
+
+.content-block{
+	margin:0;
+	padding:0;
+}
+
+.tabbar-fixed .page-content, .tabbar-through .page-content, .toolbar-fixed .page-content, .toolbar-through .page-content{
+padding:0;
+margin-top:50px;
+}
+
+a{
+color:white;
+}
+
+.color-white{
+	color:white
+}
+
+.item-media img{
+	width:auto;
+	height:auto;
+	max-width:70px;
+	max-height:70px;
+}
+
+.list-block{
+	margin:0;
+}
+.navbar, .toolbar{
+height:50px;
+}
