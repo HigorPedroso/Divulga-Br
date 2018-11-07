@@ -115,11 +115,11 @@ function returnAjax(latitude, longitude, distancia){
     dataType: 'html',
 	   beforeSend: function(){
       //$('#carregando').fadeIn(); 
-		   myApp.showPreloader('Carregando');
+		   
 $$(".container-resultsOff").hide();	  
     },
       success: function(ret) { 
-	      myApp.hidePreloader();
+	     
 		 //alert(retorno);
 		 if(ret != "null"){
 	  
