@@ -126,7 +126,6 @@ $$(".container-resultsOff").hide();
 	  var data = JSON.parse(ret);
 	  var item = "";
 	  
-	  alert('123');
 	 
 	  $$.each(data,function(i, data){
 		item += '<div class="list-block media-list">';
